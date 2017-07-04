@@ -1,0 +1,92 @@
+# SYNTAX
+
+| Expression    | Description                                                 |
+| -----------   | :----------------                                           |
+|               |                                                             |
+| GENERAL       |                                                             |
+| '#'           | Comment character                                           |
+|               |                                                             |
+| DECLARATION   |                                                             |
+| {}            | Unordered list, can be indexed with keys (i.e., dictionary) |
+| []            | Ordered list, can be indexed with integer                   |
+| ()            |                                                             |
+|               |                                                             |
+| SPECIFICATION |                                                             |
+| x()           | Argument                                                    |
+| x(a,b)        | Multiple arguments                                          |
+| x[0]          | Indexing                                                    |
+| x[0][0]       | Nested indexing                                             |
+| x[a:b]        | Slicing                                                     |
+|               |                                                             |
+| SPECIAL       |                                                             |
+| True/False    |                                                             |
+| None          |                                                             |
+| pass          |                                                             |
+
+# BUILT-IN FUNCTIONS
+
+| General | Types        | Iteration and flow | Boolean           | Comparisons   | Numeric (Int, Float[?]) | Sequence (list, set, range[?])  | String                           |
+| :------ | :----------- | :------------      | :---------------- | :------------ | :--------------------   | :------------------------------ | :------------------------------  |
+| print() | float()      | for i in x:        | or                | <             | +                       | s[i]                            | str.capitalize()                 |
+| help()  | set()        | enumerate()        | and               | <=            | -                       | s[i:j]                          | str.upper()                      |
+| open()  | list()       |                    | not               | >             | *                       |                                 | str.lower()                      |
+| read()  | dict()       | if: else:          |                   | >=            | /                       | x in s                          | str.islower()                    |
+|         |              |                    |                   |               |                         | x not in s                      | str.swapcase()                   |
+|         | bool()       | try: except:       |                   | ==            | //                      |                                 | str.casefold()                   |
+|         | tuple()      |                    |                   | !=            | %                       | len(s)                          |                                  |
+|         | int()        |                    |                   | is            | abs()                   | min(s)                          | str.partition(sep)               |
+|         |              |                    |                   | is not        | pow(x,y)                | max(s)                          | str.split(sep=None, maxsplit=-1) |
+|         | type()       |                    |                   |               | x**y                    | sum([x,y])                      |                                  |
+|         | isinstance() |                    |                   |               |                         | s.count(x)                      | str.find(sub[, start[, end]])    |
+|         | issubclass() |                    |                   |               | sum()                   |                                 | str.replace(old, new[, count])   |
+|         |              |                    |                   |               | range(x,y)              | s + t                           | str.strip([chars])               |
+|         |              |                    |                   |               |                         | s * n                           |                                  |
+|         |              |                    |                   |               | a += x                  | s *= n                          |                                  |
+|         |              |                    |                   |               | a -= x                  |                                 |                                  |
+|         |              |                    |                   |               |                         | s.append(x)                     |                                  |
+|         |              |                    |                   |               |                         | s.extend(t)                     |                                  |
+|         |              |                    |                   |               |                         | s.pop([i])                      |                                  |
+|         |              |                    |                   |               |                         | del s[i:j]                      |                                  |
+|         |              |                    |                   |               |                         | s.insert(i, x)                  |                                  |
+|         |              |                    |                   |               |                         | s.remove(x)                     |                                  |
+|         |              |                    |                   |               |                         | s.clear()                       |                                  |
+|         |              |                    |                   |               |                         | s.reverse()                     |                                  |
+|         |              |                    |                   |               |                         | ...                             |                                  |
+
+
+
+# BUILT-IN TYPES
+
+| Truth Value Testing  | Numeric              | Sequence      | Text Sequence | Binary Sequence  | Set        | Mapping  | Other                      | ... |
+| :------------------- | :------------------- | :------------ | :------------ | :--------------- | :--------- | :------- | :----------------------    | --- |
+| False                | int                  | list          | str           | ...              | set        | dict     | Modules                    |     |
+| True                 | float                | tuple         |               |                  | frozenset  |          | Classes and Class Intances |     |
+|                      | complex              | range         |               |                  |            |          | Functions                  |     |
+|                      |                      |               |               |                  |            |          | Methods                    |     |
+|                      |                      |               |               |                  |            |          | Boolean Values             |     |
+|                      |                      |               |               |                  |            |          | ...                        |     |
+
+
+# REGEX EXPRESSIONS
+
+| "Expression"  | Description                        | "\Escape character" | Description  |
+| :------------ | :-----------                       | :------------------ | :----------- |
+| .a            | a preceded by any letter           | .                   | Dot          |
+| ^a            | strings that start with a          | n                   | New line     |
+| a$            | strings that end with a            |                     |              |
+| [abc]def      | 'adef', 'bdef', 'cef'              |                     |              |
+| a│b           | a or b                             |                     |              |
+| [0-9]         | integers between 0 and 9           |                     |              |
+| [a-m]         | lowercase letters between a and m  |                     |              |
+| [0-9][0-9]    | any two-digit number               |                     |              |
+| [a-z][0-9]    | any letter-digit pair (e.g., 'a1') |                     |              |
+| [0-9]{4}      | any 4-digit pair                   |                     |              |
+| [a-z]{10}     | any 10-letter word                 |                     |              |
+| \             | Escape character                   |                     |              |
+
+
+
+
+
+
+

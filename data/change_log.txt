@@ -1,0 +1,108 @@
+############# v1.7 ################
+26.05.2017
+
+- New column: procrastination_minutes_three_day_weighted_cumulative_history (this is the Cumulative Sleep Deficit variable on p.13 of Erik's thesis, but with a new name)
+
+- New column: active_minutes
+
+- New history columns for sleep_minutes:
+    + n days ago:
+        * sleep_minutes_one_days_ago
+        * sleep_minutes_two_days_ago
+        * sleep_minutes_three_days_ago
+    + cumulative:
+        * sleep_minutes_two_day_cumulative_history
+        * sleep_minutes_three_day_cumulative_history
+        * sleep_minutes_four_day_cumulative_history            
+
+- All cumulative history calculations now treat non existent values as NaN instead of 0. (Previous behavior of treating missing values like 0 may bias results, as, for instance, it would look like 0 procrastination where it isn't).
+
+
+############# v1.6 ################
+25.05.2017
+
+- Added column: procrastination_minutes_positive_four_bins
+    + This groups the procrastination_minutes into following four bins:
+        - 0-15  (value: 0)
+        - 15-30 (value: 1)
+        - 30-60 (value: 2)
+        - 60+   (value: 3)
+        - 
+- Also see v1.5 changes below (made today)
+
+############# v1.5 ################
+25.05.2017
+
+- Added column: sleep_deficit_minutes
+    + This column reflects cumulative sleep deficit in last 4 days (number of days can be changed if needed)
+    + Sleep deficit never takes a negative value. A good night's sleep can at best make sleep deficit '0'.
+    + Sorry this took so long! For each operation, I write or modify a function in our homebrew preprocessing library, and this particular modification turned out to be quite pesky (it was a pleasure though; see "history_cumulative()" function in preparation.ipynb if you'd like to see it ;) )
+    
+- Added column: ego_depletion
+    + Calculated by summing up the '1' values in all temptation scores.  
+
+- Other small tweaks
+
+############# v1.4 ################
+23.05.2017
+
+MISSING VALUES
+- Missing values are now trasnformed as following:
+    + "NA" (Not available) used in string columns
+    + NaN (Not a number)   used in integer and float columns
+    + NaT (Not a time)     used in datetime columns 
+        
+- Please note that, unlike "NA", NaN and NaT are NOT strings. These are special values used in Python to denote missing values, and they do not cause type-related problems (e.g., a string missing value in a column of integers). This is the recommended way to handle missing values in Python.
+
+- Where NaN and NaT is used, no additional processing/conversion for these missing values should be needed. (This is tested in Orange, and the missing values are recognized correctly).
+
+-  Conversion of NaN and NaT to other values may still be necessary for non-Python environments.
+    +  If missing values cause problems in an environment, you may want to use (or adding to the environment) "missingval_return_without()" and "missingval_return_converted()" functions from the "Preparation.ipynb" notebook.  
+
+- All integers in the dataset are now floats
+    + Reason: NaN is a float, and its addition to integer columns would cause two number types to exist in the same column (unfortunately, NaN cannot be converted to an integer). Therefore, for compatibility purposes, all integers in the data is now converted to floats. 
+
+CUMULATIVE HISTORIES
+- Cumulative histories are now for two, three and four days.
+    + This is because 1-day cumulative histories were the same values with the original columns.
+    + Two days = this row + previous row
+    + Three days = this row + two previous rows
+    + Four days = this row + three previous rows
+    
+- Cumulative histories treat NaN values differently than "x_days_ago" functions. 
+    - If there is a missing value when calculating cumulative histories, it is simply read as 0 (in x_days_ago functions, it is seen as NaN).
+
+OTHER
+- New column: procrastination_minutes_positive: 
+    - This new column does NOT replae procrasintation_minutes column (as procrastination_minutes column also show negative procratination values, this could still be useful information).
+
+- New column: procrastination_minutes_positive_15by15
+    + This column is a binned version of procrastination_minutes.
+
+STILL TODO:
+- Calculate cumulative sleep deficit
+    + This requires a different approach than other cumulative value calculations in the dataset, and will be dealt with asap.
+- Add new column Erik added to merged-v1.3 
+
+
+############# v1.3 ################
+19.05.2017
+
+- Multi-row subjects were not taken into account when calculating histories and aligning times, and this was causing last values of a participant to affect the first values of the next participant. This is now corrected in all columns relevant.
+
+- All previous alignments canceled except "sleep_plan" (which was the only value that did not belong to the previous day in a row). Now each row in the data reflects yesterday's values (except for the questionnaire_timestamp, which is included only for reference purposes).
+
+- old 'date' is now 'questionnaire_timestamp'. 'date' column now points to one day before the questionnaire_timestamp. 
+(Explanation: The questionnaire_timestamp column indicates the date and time when participants filled in the questionnaire. This is, one day after the events they repor took place. Therefore, actual date the values refer to in any row is one day before questionnaire_timestamp date. Now, a new 'date' column will calculated. This 'date' column is the primary variable that is used to calculate other variables, and questionnaire_timestamp is only left in the dataset for reference and completeness purposes.)
+
+- A 'day_of_week' column added
+
+- A 'Data_merger' Orange script is aded to Git directory. 
+
+- Now each major update will be also saved to Google Drive along with a merged version and Excel files
+
+
+############# v1.2 ################
+18.05.2017
+
+- 'Cumulative history' and 'value n-days-before' columns calculated for variables decided in our meeting.

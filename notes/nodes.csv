@@ -1,0 +1,105 @@
+Id,Nodesize,Overlay,Color,EeCF-name 
+Plan,8,Base,,Plan 
+Build,8,Base,,Build 
+Maintain,8,Base,,Maintain 
+Enable,8,Base,,Enable 
+Manage,8,Base,,Manage 
+Application development,7,Base,,Application development 
+Component integration,7,Base,,Component integration 
+IS and business strategy alignment,7,Base,,IS and business strategy alignment 
+Service level management,7,Base,,Service level management 
+Business plan development,7,Base,,Business plan development 
+Product / service planning,7,Base,,Product / service planning 
+Architecture design,7,Base,,Architecture design 
+Application design,7,Base,,Application design 
+Technology trend monitoring,7,Base,,Technology trend monitoring 
+Sustainable development,7,Base,,Sustainable development 
+Innovating,7,Base,,Innovating 
+Testing,7,Base,,Testing 
+Solution deployment,7,Base,,Solution deployment 
+Documentation production,7,Base,,Documentation production 
+Systems enginering,7,Base,,Systems enginering 
+User support,7,Base,,User support 
+Change support,7,Base,,Change support 
+Service delivery,7,Base,,Service delivery 
+Problem management,7,Base,,Problem management 
+Information security strategy development,7,Base,,Information security strategy development 
+ICT quality strategy development,7,Base,,ICT quality strategy development 
+Education and training and provision,7,Base,,Education and training and provision 
+Purchasing,7,Base,,Purchasing 
+Sales proposal development,7,Base,,Sales proposal development 
+Channel management,7,Base,,Channel management 
+Sales management,7,Base,,Sales management 
+Contract management,7,Base,,Contract management 
+Personnel development,7,Base,,Personnel development 
+Information and knowledge management,7,Base,,Information and knowledge management 
+Needs identification,7,Base,,Needs identification 
+Digital marketing,7,Base,,Digital marketing 
+Forecast development,7,Base,,Forecast development 
+Project and portfilio management,7,Base,,Project and portfilio management 
+Risk management,7,Base,,Risk management 
+Relationship management,7,Base,,Relationship management 
+Process improvement,7,Base,,Process improvement 
+ICT quality management,7,Base,,ICT quality management 
+Business change management,7,Base,,Business change management 
+Information security management,7,Base,,Information security management 
+IS governance,7,Base,,IS governance 
+Academic writing,6,Base,, 
+Programming languages,6,Base,, 
+Operating systems,6,Base,, 
+User interface development,6,Base,, 
+Modelling,6,Base,, 
+Security,6,Base,, 
+Data models,6,Base,, 
+Documentation,6,Base,, 
+Problem management,6,Base,, 
+System performance measurement,6,Base,, 
+Activity logging and recording,6,Base,, 
+Product-customer need matching,6,Base,, 
+Specification-capability matching,6,Base,, 
+Data back-up,6,Base,, 
+"Old, existing and new hardware and software",6,Base,, 
+"Interfacting techniques between modules, systems, and components",6,Base,, 
+Impact of system integration existing systems,6,Base,, 
+Development tools,6,Base,, 
+Best practice design techniques,6,Base,, 
+Web programming,5,Base,, 
+Windows programming,5,Base,, 
+Javascript,4,Base,, 
+HTML,4,Base,, 
+CSS,4,Base,, 
+C++,4,Base,, 
+C#,4,Base,, 
+Java,4,Base,, 
+,,,, 
+,,,, 
+,,,, 
+,,,, 
+,,,,5* 
+Pure Javascript,3,Base,, 
+Node JS,3,Base,, 
+Express JS,3,Base,, 
+Angular JS,3,Base,, 
+Mongo DB,3,Base,, 
+Pure CSS,3,Base,, 
+LESS,3,Base,, 
+SASS,3,Base,, 
+Pure HTML,3,Base,, 
+Variables,2,Base,, 
+Operators,2,Base,, 
+Functions,2,Base,, 
+For loops,2,Base,, 
+Lesson 1,1,Base,, 
+Lesson 2,1,Base,, 
+Lesson 3,1,Base,, 
+Lesson 4,1,Base,, 
+Lesson 5,1,Base,, 
+Lesson 6,1,Base,, 
+Lesson 7,1,Base,, 
+Lesson 8,1,Base,, 
+Front-end web developer,7,Front-end developer,#FF3399, 
+MEAN stack developer,7,Mean stack developer,#FF3399, 
+Designer,7,Designer,#FF3399, 
+Developer,7,Developer,#FF3399, 
+Frank,7,Frank,#FF3399, 
+Front-end developer at Google,7,Front-end developer at Google,#FF3399, 
