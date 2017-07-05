@@ -1,8 +1,11 @@
-# DMT
-This is the project folder for Data Mining Techniques course of Vrije Uniersiteit Amsterdam.
+# DM-ML
 
-Authors: Sven van den Beukel, Erik van den Boogaard, and John (Can) Lokman
+This is the project repository for Data Mining Techniques and Machine Learning for Quantified Self courses of Vrije Uniersiteit Amsterdam.
 
+The repository also contains the "Prepocessor" package — a Python package for data manipulation and preprocessing. Preprocessor allows datasets to be stored as nested lists and contains various dataset modification functions. Due to its list-based approach, it offers an alternative approach to numpy. 
+
+
+# DM 
 Files:
 - "Step_1-Preparation_pipeline.ipynb" takes input data from "data/original_data" directory, preprocesses it, and outputs it to "data" directory.
 - "Step_2-Data_merger.ows" merges two datasets used in the project.
@@ -17,3 +20,7 @@ Requirements:
 
 - Please note that .ows files requires [Orange 3.4.1](https://orange.biolab.si/) to run. This package can also be conveniently installed using [Anaconda IDE](https://www.continuum.io/downloads).
 
+# ML
+ml4qs_preprocessing.py and ml4qs_data_sleep_levels.py are the two main files used for analyis.
+
+ml4qs_sleep_level_binarization is an extra step taken in feature creation.
