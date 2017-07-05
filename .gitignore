@@ -25,3 +25,4 @@ notes/.ipynb_checkpoints/-john-assignments-portfolio-part-2-checkpoint.ipynb
 notes/.ipynb_checkpoints/-john-code-portfolio-checkpoint.ipynb
 notes/.ipynb_checkpoints/-john-theory-portfolio-checkpoint.ipynb
 notes/.ipynb_checkpoints/-meeting_notes-checkpoint.ipynb
+*.pyc
