@@ -1,3 +1,9 @@
+############# v1.8 ################
+12.07.2017
+- Added: Extra features added 
+- Fixed: A value conversion error that affected sleep quality and chronotype ("type1_reversed" conversion)
+
+
 ############# v1.7 ################
 26.05.2017
 
