@@ -1,3 +1,13 @@
+############# v1.9 ################
+14.07.2017
+- Added: Positive-only cumulative histories of procrastination
+    + procrastination_minutes_positive_four_day_cumulative_history   
+    + procrastination_minutes_positive_three_day_cumulative_history   
+    + procrastination_minutes_positive_two_day_cumulative_history
+
+- Updated the raw data for intake (to v2.1) and daily data (v4.1)
+
+
 ############# v1.8 ################
 12.07.2017
 - Added: Extra features added 
