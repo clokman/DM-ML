@@ -1,3 +1,7 @@
+############# v2.0 ################
+15.07.2017
+- Chaged two remaining lowercase IDs ("Gh93") to uppercase ("GH93") in daily data to ensure that Orange can match all rows that belong to the same id. Latest raw data versions are now v2.3 and v4.3.
+
 ############# v1.9 ################
 14.07.2017
 - Added: Positive-only cumulative histories of procrastination
